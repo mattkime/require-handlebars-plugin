@@ -28,13 +28,12 @@
     {{#if doesntexist}}
       cant get here
     {{else}}
-      {{yeller .}}
+      {{! yeller . }}
       <br />
     {{/if}}
   {{/each}}
   <br />
 
-  {{> template_coolPartial }}
+  {{> template/coolPartial }}
   <br />
-  i18n2: {{$ "key2"}}
 </div>

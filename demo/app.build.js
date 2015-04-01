@@ -4,7 +4,7 @@
     dir: "../demo-build",
 
     optimizeCss: "standard",
-    // optimize: "none",
+    optimize: "none",
     // inlining ftw
     inlineText: true,
 
@@ -19,11 +19,11 @@
     },
 
     paths: {
-      "hbs": "../hbs",
-      "Handlebars" : "../Handlebars",
-      "underscore" : "../hbs/underscore",
-      "i18nprecompile" : "../hbs/i18nprecompile",
-      "json2" : "../hbs/json2"
+      "hbs": "../hbs/hbs",
+      "hbs/handlebars" : "../hbs/handlebars",
+      "hbs/underscore" : "../hbs/underscore",
+      "hbs/i18nprecompile" : "../hbs/i18nprecompile",
+      "hbs/json2" : "../hbs/json2"
       // if your project is already using underscore.js and you want to keep
       // the hbs plugin even after build (excludeHbs:false) you should set the
       // "hbs/underscore" path to point to the shared location like
@@ -37,7 +37,8 @@
         templateExtension : 'hbs',
         // if disableI18n is `true` it won't load locales and the i18n helper
         // won't work as well.
-        disableI18n : false
+        disableI18n : false,
+	helperDirectory : 'template/helpers/'
     },
 
     modules: [
